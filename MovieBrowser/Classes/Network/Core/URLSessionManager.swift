@@ -39,9 +39,12 @@ class URLSessionManager: NSObject {
             url = baseWithEndpoint
         }
 
+        let queryParameters = (sessionConfiguration.queryParameters ?? [:]).merging(
+        request.queryParameters ?? [:]) { (current, _) in current }
+        
         let request = URLRequest.requestWithURL(url: url,
                                                 method: request.method,
-                                                queryParameters: request.queryParameters,
+                                                queryParameters: queryParameters,
                                                 bodyParameters: request.bodyParameters,
                                                 headers: sessionConfiguration.headers)
 

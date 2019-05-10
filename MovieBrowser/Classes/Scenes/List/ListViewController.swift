@@ -21,6 +21,7 @@ final class ListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(ListCollectionViewCell.self,
                                 forCellWithReuseIdentifier: ListCollectionViewCell.cellIdentifier)
+        viewModel.fetchMovies(at: 1)
     }
 }
 

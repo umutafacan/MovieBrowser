@@ -28,6 +28,18 @@ enum HTTPHeader {
     }
 }
 
+enum RequestParameter {
+    enum Key {
+        static let apiKey = "api_key"
+        static let language = "language"
+        static let page = "page"
+    }
+
+    enum Value {
+        static let english = "en-US"
+    }
+}
+
 enum HTTPMethod: String {
     case options = "OPTIONS"
     case get = "GET"

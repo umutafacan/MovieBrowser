@@ -9,4 +9,6 @@
 protocol ListViewModelInterface {
 
     var stateChangeHandler: ((ListState.Change) -> Void)?  { get set }
+
+    func fetchMovies(at page: Int)
 }

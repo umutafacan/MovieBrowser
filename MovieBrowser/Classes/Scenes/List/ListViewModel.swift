@@ -13,4 +13,23 @@ final class ListViewModel: ListViewModelInterface {
     var stateChangeHandler: ((ListState.Change) -> Void)?
 
     private var state = ListState()
+
+    private var dataController: ListDataProtocol?
+
+    init(dataController: ListDataProtocol) {
+        self.dataController = dataController
+    }
+
+    func fetchMovies(at page: Int) {
+        dataController?.fetchMovies(page: page, completion: { (response, error) in
+            guard error == nil else {
+                return
+            }
+            guard let response = response else {
+                return
+            }
+
+            // TODO: handle response
+        })
+    }
 }

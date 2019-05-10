@@ -15,9 +15,11 @@ final class SessionConfiguration {
     /// Components of the header section of request and response messages in HTTP
     var headers: StringDictionary?
 
-    init(baseURL: URL, headers: StringDictionary? = nil) {
+    var queryParameters: StringDictionary?
+
+    init(baseURL: URL, headers: StringDictionary? = nil, queryParameters: StringDictionary? = nil) {
         self.baseURL = baseURL
         self.headers = headers
+        self.queryParameters = queryParameters
     }
 }
-

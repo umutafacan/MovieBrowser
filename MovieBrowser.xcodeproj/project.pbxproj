@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */; };
+		BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA562285F114006A6B40 /* APIConstants.swift */; };
+		BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */; };
+		BE2EFA5F2285F30C006A6B40 /* ListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5E2285F30C006A6B40 /* ListDataController.swift */; };
+		BE2EFA622285F349006A6B40 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA612285F349006A6B40 /* Movie.swift */; };
+		BE2EFA642285F77B006A6B40 /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA632285F77B006A6B40 /* MovieListResponse.swift */; };
+		BE2EFA662285F827006A6B40 /* MovieListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA652285F827006A6B40 /* MovieListRequest.swift */; };
+		BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA682285F9F0006A6B40 /* DecodableHelpers.swift */; };
 		BE2FAB4F2285B76B0070D496 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB4E2285B76B0070D496 /* NetworkConstants.swift */; };
 		BE2FAB542285B92F0070D496 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB532285B92F0070D496 /* Response.swift */; };
 		BE2FAB562285B9520070D496 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB552285B9520070D496 /* Request.swift */; };
@@ -48,6 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BE2EFA562285F114006A6B40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListDataProtocol.swift; path = ../ListDataProtocol.swift; sourceTree = "<group>"; };
+		BE2EFA5E2285F30C006A6B40 /* ListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataController.swift; sourceTree = "<group>"; };
+		BE2EFA612285F349006A6B40 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		BE2EFA632285F77B006A6B40 /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
+		BE2EFA652285F827006A6B40 /* MovieListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequest.swift; sourceTree = "<group>"; };
+		BE2EFA682285F9F0006A6B40 /* DecodableHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableHelpers.swift; sourceTree = "<group>"; };
 		BE2FAB4E2285B76B0070D496 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkConstants.swift; path = ../NetworkConstants.swift; sourceTree = "<group>"; };
 		BE2FAB532285B92F0070D496 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		BE2FAB552285B9520070D496 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -102,12 +118,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE2EFA5D2285F2A4006A6B40 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BE2EFA5E2285F30C006A6B40 /* ListDataController.swift */,
+				BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */,
+				BE2EFA602285F336006A6B40 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE2EFA602285F336006A6B40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE2EFA612285F349006A6B40 /* Movie.swift */,
+				BE2EFA652285F827006A6B40 /* MovieListRequest.swift */,
+				BE2EFA632285F77B006A6B40 /* MovieListResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE2EFA672285F9DA006A6B40 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BE2EFA682285F9F0006A6B40 /* DecodableHelpers.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		BE2FAB4D2285B7560070D496 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BE2EFA672285F9DA006A6B40 /* Protocol */,
 				BE2FAB502285B9010070D496 /* Constants */,
 				BE2FAB512285B90D0070D496 /* Core */,
 				BE2FAB522285B91F0070D496 /* Models */,
+				BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -116,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BE2FAB4E2285B76B0070D496 /* NetworkConstants.swift */,
+				BE2EFA562285F114006A6B40 /* APIConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -210,9 +257,10 @@
 			children = (
 				BEFB9FEE22851EC200726CCD /* ListState.swift */,
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
-				BEFBA03222859BB000726CCD /* ListViewController.xib */,
 				BEFB9FEC22851EB400726CCD /* ListViewModel.swift */,
 				BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */,
+				BEFBA03222859BB000726CCD /* ListViewController.xib */,
+				BE2EFA5D2285F2A4006A6B40 /* Data */,
 				BEFB9FF22285245C00726CCD /* Views */,
 			);
 			path = List;
@@ -397,19 +445,27 @@
 			files = (
 				BEFB9FF42285247300726CCD /* ListCollectionViewCell.swift in Sources */,
 				BE2FAB5A2285B9940070D496 /* URLRequest.swift in Sources */,
+				BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */,
 				BE2FAB562285B9520070D496 /* Request.swift in Sources */,
 				BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */,
+				BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */,
 				BE2FAB4F2285B76B0070D496 /* NetworkConstants.swift in Sources */,
 				BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */,
 				BEFB9FEF22851EC200726CCD /* ListState.swift in Sources */,
 				BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */,
+				BE2EFA662285F827006A6B40 /* MovieListRequest.swift in Sources */,
 				BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */,
 				BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */,
 				BE2FAB542285B92F0070D496 /* Response.swift in Sources */,
+				BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */,
+				BE2EFA642285F77B006A6B40 /* MovieListResponse.swift in Sources */,
 				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
+				BE2EFA622285F349006A6B40 /* Movie.swift in Sources */,
 				BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */,
 				BE2FAB582285B9710070D496 /* SessionConfiguration.swift in Sources */,
+				BE2EFA5F2285F30C006A6B40 /* ListDataController.swift in Sources */,
 				BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */,
+				BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

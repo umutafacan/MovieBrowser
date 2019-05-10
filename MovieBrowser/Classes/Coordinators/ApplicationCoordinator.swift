@@ -26,7 +26,7 @@ final class ApplicationCoordinator: Coordinator {
 private extension ApplicationCoordinator {
 
     func runListFlow() {
-        let viewModel = ListViewModel()
+        let viewModel = ListViewModel(dataController: ListDataController())
         let viewController = ListViewController.loadFromNib()
         viewController.viewModel = viewModel
 
