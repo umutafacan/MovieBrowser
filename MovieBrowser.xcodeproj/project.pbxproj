@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0A82284876700413B3D /* AppDelegate.swift */; };
 		BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0AA2284876700413B3D /* ListViewController.swift */; };
-		BEABC0AE2284876700413B3D /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0AC2284876700413B3D /* List.storyboard */; };
 		BEABC0B02284876800413B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0AF2284876800413B3D /* Assets.xcassets */; };
 		BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0B12284876800413B3D /* LaunchScreen.storyboard */; };
 		BEABC0BE2284876800413B3D /* MovieBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0BD2284876800413B3D /* MovieBrowserTests.swift */; };
 		BEABC0C92284876800413B3D /* MovieBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */; };
+		BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FDE228514CF00726CCD /* ListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		BEABC0A52284876700413B3D /* MovieBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0A82284876700413B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEABC0AA2284876700413B3D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		BEABC0AD2284876700413B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/List.storyboard; sourceTree = "<group>"; };
 		BEABC0AF2284876800413B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEABC0B22284876800413B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEABC0B42284876800413B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		BEABC0C42284876800413B3D /* MovieBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBrowserUITests.swift; sourceTree = "<group>"; };
 		BEABC0CA2284876800413B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFB9FDE228514CF00726CCD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +97,11 @@
 		BEABC0A72284876700413B3D /* MovieBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				BEABC0D722848C5700413B3D /* Scenes */,
 				BEABC0D622848AAE00413B3D /* Resources */,
+				BEABC0D722848C5700413B3D /* Scenes */,
+				BEABC0B42284876800413B3D /* Info.plist */,
 				BEABC0A82284876700413B3D /* AppDelegate.swift */,
 				BEABC0B12284876800413B3D /* LaunchScreen.storyboard */,
-				BEABC0B42284876800413B3D /* Info.plist */,
 			);
 			path = MovieBrowser;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
-				BEABC0AC2284876700413B3D /* List.storyboard */,
+				BEFB9FDE228514CF00726CCD /* ListViewController.xib */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 			files = (
 				BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */,
 				BEABC0B02284876800413B3D /* Assets.xcassets in Resources */,
-				BEABC0AE2284876700413B3D /* List.storyboard in Resources */,
+				BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BEABC0AC2284876700413B3D /* List.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEABC0AD2284876700413B3D /* Base */,
-			);
-			name = List.storyboard;
-			sourceTree = "<group>";
-		};
 		BEABC0B12284876800413B3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
