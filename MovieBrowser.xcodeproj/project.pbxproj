@@ -16,6 +16,7 @@
 		BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FDE228514CF00726CCD /* ListViewController.xib */; };
 		BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE2228517B500726CCD /* Coordinator.swift */; };
 		BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */; };
+		BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BEFB9FDE228514CF00726CCD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		BEFB9FE2228517B500726CCD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,7 @@
 		BEFB9FE1228517A100726CCD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BEFB9FE2228517B500726CCD /* Coordinator.swift */,
+				BEFB9FE922851D5700726CCD /* Protocols */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -177,6 +179,15 @@
 				BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BEFB9FE922851D5700726CCD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB9FE2228517B500726CCD /* Coordinator.swift */,
+				BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */,
 				BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */,
 				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
+				BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */,
 				BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
