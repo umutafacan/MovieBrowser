@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 final class ListCollectionViewCell: UICollectionViewCell {
-    
+
+    static let cellIdentifier = "ListCollectionViewCell"
+
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
 }

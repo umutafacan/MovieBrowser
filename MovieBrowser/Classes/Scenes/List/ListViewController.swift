@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+final class ListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
@@ -16,7 +16,42 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(ListCollectionViewCell.self,
+                                forCellWithReuseIdentifier: ListCollectionViewCell.cellIdentifier)
+    }
+}
+
+extension ListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return 1 // TODO: will be implemented
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: ListCollectionViewCell.cellIdentifier,
+            for: indexPath) as? ListCollectionViewCell else {
+            return UICollectionViewCell(frame: .zero)
+        }
+
+        // TODO: To be implemeted
+
+        return cell
+    }
+}
+
+extension ListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // TODO: To be implemeted
+        let height = 50.0
+        let width = 100.0
+        return CGSize(width: width, height: height)
     }
 }
 

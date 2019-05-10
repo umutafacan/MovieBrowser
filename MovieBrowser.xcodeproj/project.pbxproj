@@ -13,7 +13,6 @@
 		BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0B12284876800413B3D /* LaunchScreen.storyboard */; };
 		BEABC0BE2284876800413B3D /* MovieBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0BD2284876800413B3D /* MovieBrowserTests.swift */; };
 		BEABC0C92284876800413B3D /* MovieBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */; };
-		BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FDE228514CF00726CCD /* ListViewController.xib */; };
 		BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE2228517B500726CCD /* Coordinator.swift */; };
 		BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */; };
 		BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */; };
@@ -22,6 +21,7 @@
 		BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */; };
 		BEFB9FF42285247300726CCD /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */; };
 		BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */; };
+		BEFBA03322859BB000726CCD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFBA03222859BB000726CCD /* ListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		BEABC0C42284876800413B3D /* MovieBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBrowserUITests.swift; sourceTree = "<group>"; };
 		BEABC0CA2284876800413B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEFB9FDE228514CF00726CCD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		BEFB9FE2228517B500726CCD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelInterface.swift; sourceTree = "<group>"; };
 		BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEFBA03222859BB000726CCD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,12 +159,12 @@
 		BEABC0D822848C6C00413B3D /* List */ = {
 			isa = PBXGroup;
 			children = (
-				BEFB9FF22285245C00726CCD /* Views */,
 				BEFB9FEE22851EC200726CCD /* ListState.swift */,
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
-				BEFB9FDE228514CF00726CCD /* ListViewController.xib */,
+				BEFBA03222859BB000726CCD /* ListViewController.xib */,
 				BEFB9FEC22851EB400726CCD /* ListViewModel.swift */,
 				BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */,
+				BEFB9FF22285245C00726CCD /* Views */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -319,8 +319,8 @@
 			files = (
 				BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */,
 				BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */,
+				BEFBA03322859BB000726CCD /* ListViewController.xib in Resources */,
 				BEABC0B02284876800413B3D /* Assets.xcassets in Resources */,
-				BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
