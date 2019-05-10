@@ -14,6 +14,7 @@
 		BEABC0BE2284876800413B3D /* MovieBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0BD2284876800413B3D /* MovieBrowserTests.swift */; };
 		BEABC0C92284876800413B3D /* MovieBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */; };
 		BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FDE228514CF00726CCD /* ListViewController.xib */; };
+		BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE2228517B500726CCD /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BEABC0C82284876800413B3D /* MovieBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBrowserUITests.swift; sourceTree = "<group>"; };
 		BEABC0CA2284876800413B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEFB9FDE228514CF00726CCD /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		BEFB9FE2228517B500726CCD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		BEABC0A72284876700413B3D /* MovieBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB9FE02285178900726CCD /* Classes */,
 				BEABC0D622848AAE00413B3D /* Resources */,
-				BEABC0D722848C5700413B3D /* Scenes */,
 				BEABC0B42284876800413B3D /* Info.plist */,
 				BEABC0A82284876700413B3D /* AppDelegate.swift */,
 				BEABC0B12284876800413B3D /* LaunchScreen.storyboard */,
@@ -147,6 +149,23 @@
 				BEFB9FDE228514CF00726CCD /* ListViewController.xib */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		BEFB9FE02285178900726CCD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB9FE1228517A100726CCD /* Base */,
+				BEABC0D722848C5700413B3D /* Scenes */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BEFB9FE1228517A100726CCD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB9FE2228517B500726CCD /* Coordinator.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +301,7 @@
 			files = (
 				BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */,
 				BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */,
+				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
