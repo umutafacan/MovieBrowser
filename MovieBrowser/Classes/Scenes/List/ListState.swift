@@ -12,6 +12,7 @@ final class ListState {
 
     enum Change {
         case loading(Bool)
+        case movies
     }
 
     var onChange: ((Change) -> Void)?

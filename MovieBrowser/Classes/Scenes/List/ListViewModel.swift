@@ -12,6 +12,11 @@ final class ListViewModel: ListViewModelInterface {
 
     var stateChangeHandler: ((ListState.Change) -> Void)?
 
+    var movies: [Movie] = []
+
+    private var latestFetchedPage = 0
+    private var totalPages: Int?
+
     private var state = ListState()
 
     private var dataController: ListDataProtocol?
@@ -20,16 +25,34 @@ final class ListViewModel: ListViewModelInterface {
         self.dataController = dataController
     }
 
-    func fetchMovies(at page: Int) {
-        dataController?.fetchMovies(page: page, completion: { (response, error) in
-            guard error == nil else {
-                return
-            }
-            guard let response = response else {
+    func loadMovies() {
+
+        guard latestFetchedPage < totalPages ?? Int.max else {
+            // TODO: no more content error
+            return
+        }
+
+        state.isLoading = true
+
+        dataController?.fetchMovies(page: latestFetchedPage + 1, completion: { [weak self] (response, error) in
+            guard let strongSelf = self else {
                 return
             }
 
-            // TODO: handle response
+            strongSelf.state.isLoading = true
+
+            guard error == nil else {
+                // handle error
+                return
+            }
+            guard let response = response,
+            let movies = response.movies else {
+                return
+            }
+
+            strongSelf.movies.append(contentsOf: movies)
+            strongSelf.latestFetchedPage += 1
+            strongSelf.totalPages = response.totalPages
         })
     }
 }

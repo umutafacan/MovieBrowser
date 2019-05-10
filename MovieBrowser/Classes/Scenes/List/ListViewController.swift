@@ -21,7 +21,26 @@ final class ListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(ListCollectionViewCell.self,
                                 forCellWithReuseIdentifier: ListCollectionViewCell.cellIdentifier)
-        viewModel.fetchMovies(at: 1)
+        viewModel.loadMovies()
+    }
+}
+
+private extension ListViewController {
+
+    func addChangeObserver() {
+        viewModel.stateChangeHandler = { [unowned self] change in
+            self.applyChange(change)
+        }
+    }
+
+    func applyChange(_ change: ListState.Change) {
+        switch change {
+        case .loading(let isLoading):
+        // TODO: toggle loading
+            break
+        case .movies:
+            collectionView.reloadData()
+        }
     }
 }
 
@@ -39,7 +58,7 @@ extension ListViewController: UICollectionViewDataSource {
             return UICollectionViewCell(frame: .zero)
         }
 
-        // TODO: To be implemeted
+        //
 
         return cell
     }
@@ -50,8 +69,8 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         // TODO: To be implemeted
-        let height = 50.0
-        let width = 100.0
+        let height: CGFloat = 100
+        let width = collectionView.frame.width
         return CGSize(width: width, height: height)
     }
 }
