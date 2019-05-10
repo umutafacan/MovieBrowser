@@ -17,6 +17,9 @@
 		BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE2228517B500726CCD /* Coordinator.swift */; };
 		BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */; };
 		BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */; };
+		BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEC22851EB400726CCD /* ListViewModel.swift */; };
+		BEFB9FEF22851EC200726CCD /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEE22851EC200726CCD /* ListState.swift */; };
+		BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		BEFB9FE2228517B500726CCD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BEFB9FE722851A2E00726CCD /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		BEFB9FEC22851EB400726CCD /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		BEFB9FEE22851EC200726CCD /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
+		BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +155,11 @@
 		BEABC0D822848C6C00413B3D /* List */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB9FEE22851EC200726CCD /* ListState.swift */,
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
 				BEFB9FDE228514CF00726CCD /* ListViewController.xib */,
+				BEFB9FEC22851EB400726CCD /* ListViewModel.swift */,
+				BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -321,8 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */,
 				BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */,
+				BEFB9FEF22851EC200726CCD /* ListState.swift in Sources */,
 				BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */,
+				BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */,
 				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
 				BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */,
 				BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */,

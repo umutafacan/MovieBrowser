@@ -12,6 +12,8 @@ class ListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    var viewModel: ListViewModelInterface!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
