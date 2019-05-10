@@ -20,6 +20,8 @@
 		BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEC22851EB400726CCD /* ListViewModel.swift */; };
 		BEFB9FEF22851EC200726CCD /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FEE22851EC200726CCD /* ListState.swift */; };
 		BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */; };
+		BEFB9FF42285247300726CCD /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */; };
+		BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		BEFB9FEC22851EB400726CCD /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		BEFB9FEE22851EC200726CCD /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
 		BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelInterface.swift; sourceTree = "<group>"; };
+		BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		BEABC0D822848C6C00413B3D /* List */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB9FF22285245C00726CCD /* Views */,
 				BEFB9FEE22851EC200726CCD /* ListState.swift */,
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
 				BEFB9FDE228514CF00726CCD /* ListViewController.xib */,
@@ -197,6 +202,15 @@
 				BEFB9FEA22851D6C00726CCD /* NibLoadable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BEFB9FF22285245C00726CCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */,
+				BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */,
 				BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */,
 				BEABC0B02284876800413B3D /* Assets.xcassets in Resources */,
 				BEFB9FDF228514CF00726CCD /* ListViewController.xib in Resources */,
@@ -330,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB9FF42285247300726CCD /* ListCollectionViewCell.swift in Sources */,
 				BEFB9FF122851FC900726CCD /* ListViewModelInterface.swift in Sources */,
 				BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */,
 				BEFB9FEF22851EC200726CCD /* ListState.swift in Sources */,

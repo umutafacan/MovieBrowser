@@ -26,6 +26,10 @@ final class ApplicationCoordinator: Coordinator {
 private extension ApplicationCoordinator {
 
     func runListFlow() {
-        // Initialize List View Controller
+        let viewModel = ListViewModel()
+        let viewController = ListViewController.loadFromNib()
+        viewController.viewModel = viewModel
+
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }
