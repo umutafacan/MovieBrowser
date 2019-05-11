@@ -10,6 +10,8 @@
 		BE008F522286C22B00C63686 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F512286C22B00C63686 /* ImageRequest.swift */; };
 		BE008F542286D9F700C63686 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F532286D9F700C63686 /* ImageView.swift */; };
 		BE008F562286DA2200C63686 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F552286DA2200C63686 /* ImageLoader.swift */; };
+		BE008F582286FC9B00C63686 /* ListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F572286FC9B00C63686 /* ListFooterView.swift */; };
+		BE008F5A2286FD1000C63686 /* ListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE008F592286FD1000C63686 /* ListFooterView.xib */; };
 		BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */; };
 		BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA562285F114006A6B40 /* APIConstants.swift */; };
 		BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */; };
@@ -62,6 +64,8 @@
 		BE008F512286C22B00C63686 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		BE008F532286D9F700C63686 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BE008F552286DA2200C63686 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BE008F572286FC9B00C63686 /* ListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFooterView.swift; sourceTree = "<group>"; };
+		BE008F592286FD1000C63686 /* ListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFooterView.xib; sourceTree = "<group>"; };
 		BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE2EFA562285F114006A6B40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListDataProtocol.swift; path = ../ListDataProtocol.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 			children = (
 				BEFB9FF32285247300726CCD /* ListCollectionViewCell.swift */,
 				BEFB9FF5228524AB00726CCD /* ListCollectionViewCell.xib */,
+				BE008F572286FC9B00C63686 /* ListFooterView.swift */,
+				BE008F592286FD1000C63686 /* ListFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -426,6 +432,7 @@
 			files = (
 				BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */,
 				BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */,
+				BE008F5A2286FD1000C63686 /* ListFooterView.xib in Resources */,
 				BEFBA03322859BB000726CCD /* ListViewController.xib in Resources */,
 				BEABC0B02284876800413B3D /* Assets.xcassets in Resources */,
 			);
@@ -467,6 +474,7 @@
 				BE008F562286DA2200C63686 /* ImageLoader.swift in Sources */,
 				BE2EFA662285F827006A6B40 /* MovieListRequest.swift in Sources */,
 				BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */,
+				BE008F582286FC9B00C63686 /* ListFooterView.swift in Sources */,
 				BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */,
 				BE2FAB542285B92F0070D496 /* Response.swift in Sources */,
 				BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */,

@@ -10,6 +10,11 @@ import UIKit
 
 final class ListViewController: UIViewController {
 
+    private enum Constant {
+        static let buttonHeight: CGFloat = 50.0
+        static let horizontalCellHeight: CGFloat = 100.0
+    }
+
     @IBOutlet private weak var collectionView: UICollectionView!
 
     var viewModel: ListViewModelInterface!
@@ -22,6 +27,8 @@ final class ListViewController: UIViewController {
         collectionView.register(ListCollectionViewCell.defaultNib,
                                 forCellWithReuseIdentifier: ListCollectionViewCell.cellIdentifier)
 
+        collectionView.register(ListFooterView.defaultNib,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ListFooterView.identifier)
         addChangeObserver()
         
         viewModel.loadMovies()
@@ -67,16 +74,54 @@ extension ListViewController: UICollectionViewDataSource {
 
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        if (kind == UICollectionView.elementKindSectionFooter) {
+            let footerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: ListFooterView.identifier,
+                for: indexPath)
+
+            setup(footerView as? ListFooterView)
+
+            return footerView
+        }
+        fatalError()
+    }
 }
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // TODO: To be implemeted
-        let height: CGFloat = 100
+
         let width = collectionView.frame.width
-        return CGSize(width: width, height: height)
+        return CGSize(width: width, height: Constant.horizontalCellHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+
+        let width = collectionView.frame.width
+        return CGSize(width: width, height: Constant.buttonHeight)
+    }
+}
+
+private extension ListViewController {
+    func setup(_ footerView: ListFooterView?) {
+        // TODO: Localize
+        footerView?.title = "Load More"
+        let gestureRecognizer = UITapGestureRecognizer(target: self,
+                                                       action: #selector(loadMoreButtonTapped))
+        footerView?.addGestureRecognizer(gestureRecognizer)
+    }
+
+    @objc
+    func loadMoreButtonTapped() {
+        viewModel.loadMovies()
     }
 }
 
