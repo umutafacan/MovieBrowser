@@ -15,6 +15,8 @@
 		BE008F5D22872DDB00C63686 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F5C22872DDB00C63686 /* ObjectAssociation.swift */; };
 		BE008F5F22872E2200C63686 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */; };
 		BE008F6222872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F6122872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift */; };
+		BE008F65228745CC00C63686 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F64228745CC00C63686 /* DetailViewController.swift */; };
+		BE008F67228745D800C63686 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE008F66228745D800C63686 /* DetailViewController.xib */; };
 		BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */; };
 		BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA562285F114006A6B40 /* APIConstants.swift */; };
 		BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */; };
@@ -72,6 +74,8 @@
 		BE008F5C22872DDB00C63686 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
 		BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		BE008F6122872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Helpers.swift"; sourceTree = "<group>"; };
+		BE008F64228745CC00C63686 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE008F66228745D800C63686 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE2EFA562285F114006A6B40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListDataProtocol.swift; path = ../ListDataProtocol.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 				BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BE008F63228745BF00C63686 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BE008F64228745CC00C63686 /* DetailViewController.swift */,
+				BE008F66228745D800C63686 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		BE2EFA5D2285F2A4006A6B40 /* Data */ = {
@@ -282,6 +295,7 @@
 		BEABC0D722848C5700413B3D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BE008F63228745BF00C63686 /* Detail */,
 				BEABC0D822848C6C00413B3D /* List */,
 			);
 			path = Scenes;
@@ -456,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEFB9FF6228524AB00726CCD /* ListCollectionViewCell.xib in Resources */,
+				BE008F67228745D800C63686 /* DetailViewController.xib in Resources */,
 				BEABC0B32284876800413B3D /* LaunchScreen.storyboard in Resources */,
 				BE008F5A2286FD1000C63686 /* ListFooterView.xib in Resources */,
 				BEFBA03322859BB000726CCD /* ListViewController.xib in Resources */,
@@ -503,6 +518,7 @@
 				BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */,
 				BE2FAB542285B92F0070D496 /* Response.swift in Sources */,
 				BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */,
+				BE008F65228745CC00C63686 /* DetailViewController.swift in Sources */,
 				BE2EFA642285F77B006A6B40 /* MovieListResponse.swift in Sources */,
 				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
 				BE008F5F22872E2200C63686 /* UIViewController+Loading.swift in Sources */,
