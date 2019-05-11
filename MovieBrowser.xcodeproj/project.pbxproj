@@ -292,9 +292,9 @@
 			children = (
 				BEFB9FEE22851EC200726CCD /* ListState.swift */,
 				BEABC0AA2284876700413B3D /* ListViewController.swift */,
+				BEFBA03222859BB000726CCD /* ListViewController.xib */,
 				BEFB9FEC22851EB400726CCD /* ListViewModel.swift */,
 				BEFB9FF022851FC900726CCD /* ListViewModelInterface.swift */,
-				BEFBA03222859BB000726CCD /* ListViewController.xib */,
 				BE2EFA5D2285F2A4006A6B40 /* Data */,
 				BEFB9FF22285245C00726CCD /* Views */,
 			);

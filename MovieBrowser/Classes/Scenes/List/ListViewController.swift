@@ -12,12 +12,25 @@ final class ListViewController: UIViewController {
 
     private enum Constant {
         static let buttonHeight: CGFloat = 50.0
-        static let horizontalCellHeight: CGFloat = 100.0
+        static let listCellHeight: CGFloat = 100.0
+        static let gridCellHeight: CGFloat = 200.0
+        static let cellSpacing: CGFloat = 10.0
+    }
+
+    enum Layout {
+        case list
+        case grid
     }
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
     var viewModel: ListViewModelInterface!
+
+    private var layout: Layout = .grid {
+        didSet {
+            configureLayoutButton(layout: layout)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +43,9 @@ final class ListViewController: UIViewController {
         collectionView.register(ListFooterView.defaultNib,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ListFooterView.identifier)
         addChangeObserver()
-        
+
+        configureNavigationBar()
+
         viewModel.loadMovies()
     }
 }
@@ -70,6 +85,7 @@ extension ListViewController: UICollectionViewDataSource {
         let movie = viewModel.movies[indexPath.item]
         cell.title = movie.title
         cell.imagePath = movie.posterPath
+        cell.style = layout
 
         return cell
     }
@@ -96,8 +112,19 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = collectionView.frame.width
-        return CGSize(width: width, height: Constant.horizontalCellHeight)
+        var width: CGFloat
+        var height: CGFloat
+
+        switch layout {
+        case .list:
+            width = collectionView.frame.width
+            height = Constant.listCellHeight
+        case .grid:
+            width = (collectionView.frame.width - Constant.cellSpacing) / 2
+            height = Constant.gridCellHeight
+        }
+
+        return CGSize(width: width, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -121,6 +148,41 @@ private extension ListViewController {
     @objc
     func loadMoreButtonTapped() {
         viewModel.loadMovies()
+    }
+
+    func configureLayoutButton(layout: Layout) {
+        var image: UIImage?
+
+        switch layout {
+        case .list:
+            image = UIImage(named: "grid")
+        case .grid:
+            image = UIImage(named: "list")
+        }
+
+        let button = UIBarButtonItem(image: image,
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(toggleLayout))
+
+        navigationItem.setRightBarButton(button, animated: true)
+    }
+
+    @objc
+    func toggleLayout() {
+        switch layout {
+        case .grid:
+            layout = .list
+        case .list:
+            layout = .grid
+        }
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+
+    func configureNavigationBar() {
+        configureLayoutButton(layout: layout)
+        // TODO: Localize
+        navigationItem.title = "Movies List"
     }
 }
 

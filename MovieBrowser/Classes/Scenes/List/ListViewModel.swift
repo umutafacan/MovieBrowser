@@ -42,7 +42,8 @@ final class ListViewModel: ListViewModelInterface {
 
         state.isLoading = true
 
-        dataController?.fetchMovies(page: latestFetchedPage + 1, completion: { [weak self] (response, error) in
+        dataController?.fetchMovies(page: latestFetchedPage + 1,
+                                    completion: { [weak self] (response, error) in
             guard let strongSelf = self else {
                 return
             }

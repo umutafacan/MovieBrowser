@@ -28,14 +28,26 @@ final class ListCollectionViewCell: UICollectionViewCell {
         }
     }
 
+    var style: ListViewController.Layout = .list {
+        didSet {
+            switch style {
+            case .list:
+                titleLabel.textAlignment = .natural
+            case .grid:
+                titleLabel.textAlignment = .center
+            }
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
 
     func setup() {
-        titleLabel.backgroundColor = UIColor(white: 0, alpha: 0.3)
+        titleLabel.backgroundColor = UIColor(white: 0, alpha: 0.4)
         titleLabel.textColor = UIColor.white
+        titleLabel.numberOfLines = 0
         imageView.contentMode = .scaleAspectFill
     }
 }
