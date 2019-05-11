@@ -8,6 +8,8 @@
 
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 typealias ImageCompletion = ((UIImage?) -> Void)
 
 final class ImageLoader {
@@ -15,6 +17,12 @@ final class ImageLoader {
     private var task: URLSessionTask?
 
     func loadImage(path: String, completion: @escaping ImageCompletion) {
+
+        if let imageFromCache = imageCache.object(forKey: path as AnyObject) as? UIImage {
+            completion(imageFromCache)
+            return
+        }
+
         task?.cancel()
 
         let request = ImageRequest(path: path)
@@ -24,7 +32,12 @@ final class ImageLoader {
                     completion(nil)
                     return
                 }
-                let image = UIImage(data: data)
+                guard let image = UIImage(data: data) else {
+                    completion(nil)
+                    return
+                }
+
+                imageCache.setObject(image, forKey: path as AnyObject)
                 completion(image)
             }
         }
