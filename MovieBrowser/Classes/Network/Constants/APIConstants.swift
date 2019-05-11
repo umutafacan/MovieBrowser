@@ -10,4 +10,6 @@ enum APIConstants {
 
     static let baseURL = "https://api.themoviedb.org/3/"
     static let apiKey = "fd2b04342048fa2d5f728561866ad52a"
+
+    static let imageURL = "https://image.tmdb.org/t/p/"
 }

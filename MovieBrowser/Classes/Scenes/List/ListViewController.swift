@@ -19,8 +19,11 @@ final class ListViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(ListCollectionViewCell.self,
+        collectionView.register(ListCollectionViewCell.defaultNib,
                                 forCellWithReuseIdentifier: ListCollectionViewCell.cellIdentifier)
+
+        addChangeObserver()
+        
         viewModel.loadMovies()
     }
 }
@@ -47,7 +50,7 @@ private extension ListViewController {
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 1 // TODO: will be implemented
+        return viewModel.movies.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -55,10 +58,12 @@ extension ListViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ListCollectionViewCell.cellIdentifier,
             for: indexPath) as? ListCollectionViewCell else {
-            return UICollectionViewCell(frame: .zero)
+                return UICollectionViewCell(frame: .zero)
         }
 
-        //
+        let movie = viewModel.movies[indexPath.item]
+        cell.title = movie.title
+        cell.imagePath = movie.posterPath
 
         return cell
     }

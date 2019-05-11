@@ -10,7 +10,15 @@ import Foundation
 
 final class ListViewModel: ListViewModelInterface {
 
-    var stateChangeHandler: ((ListState.Change) -> Void)?
+    var stateChangeHandler: ((ListState.Change) -> Void)? {
+        get {
+            return state.onChange
+        }
+
+        set {
+            state.onChange = newValue
+        }
+    }
 
     var movies: [Movie] = []
 
@@ -53,6 +61,8 @@ final class ListViewModel: ListViewModelInterface {
             strongSelf.movies.append(contentsOf: movies)
             strongSelf.latestFetchedPage += 1
             strongSelf.totalPages = response.totalPages
+
+            strongSelf.state.onChange?(.movies)
         })
     }
 }

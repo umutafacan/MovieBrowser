@@ -13,6 +13,8 @@ public protocol NibLoadable {
     /// Default nib name.
     static var defaultNibName: String { get }
 
+    /// Default nib created using nib name and bundle.
+    static var defaultNib: UINib { get }
 
     /// Loads view from the default nib.
     ///
@@ -24,6 +26,10 @@ public extension NibLoadable {
 
     static var defaultNibName: String {
         return String(describing: self)
+    }
+
+    static var defaultNib: UINib {
+        return UINib(nibName: defaultNibName, bundle: Bundle.main)
     }
 
     static func loadFromNib() -> Self {
