@@ -46,8 +46,7 @@ private extension ListViewController {
     func applyChange(_ change: ListState.Change) {
         switch change {
         case .loading(let isLoading):
-        // TODO: toggle loading
-            break
+            toggleIndicatingActivity(isLoading)
         case .movies:
             collectionView.reloadData()
         }

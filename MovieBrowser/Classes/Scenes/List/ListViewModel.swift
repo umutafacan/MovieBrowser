@@ -47,7 +47,7 @@ final class ListViewModel: ListViewModelInterface {
                 return
             }
 
-            strongSelf.state.isLoading = true
+            strongSelf.state.isLoading = false
 
             guard error == nil else {
                 // handle error

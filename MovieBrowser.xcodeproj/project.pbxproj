@@ -12,6 +12,9 @@
 		BE008F562286DA2200C63686 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F552286DA2200C63686 /* ImageLoader.swift */; };
 		BE008F582286FC9B00C63686 /* ListFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F572286FC9B00C63686 /* ListFooterView.swift */; };
 		BE008F5A2286FD1000C63686 /* ListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE008F592286FD1000C63686 /* ListFooterView.xib */; };
+		BE008F5D22872DDB00C63686 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F5C22872DDB00C63686 /* ObjectAssociation.swift */; };
+		BE008F5F22872E2200C63686 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */; };
+		BE008F6222872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F6122872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift */; };
 		BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */; };
 		BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA562285F114006A6B40 /* APIConstants.swift */; };
 		BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */; };
@@ -66,6 +69,9 @@
 		BE008F552286DA2200C63686 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		BE008F572286FC9B00C63686 /* ListFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFooterView.swift; sourceTree = "<group>"; };
 		BE008F592286FD1000C63686 /* ListFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListFooterView.xib; sourceTree = "<group>"; };
+		BE008F5C22872DDB00C63686 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		BE008F6122872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Helpers.swift"; sourceTree = "<group>"; };
 		BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE2EFA562285F114006A6B40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListDataProtocol.swift; path = ../ListDataProtocol.swift; sourceTree = "<group>"; };
@@ -128,6 +134,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE008F5B2287097600C63686 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				BE008F532286D9F700C63686 /* ImageView.swift */,
+				BE008F552286DA2200C63686 /* ImageLoader.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		BE008F6022872E2B00C63686 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE008F6122872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift */,
+				BE008F5E22872E2200C63686 /* UIViewController+Loading.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BE2EFA5D2285F2A4006A6B40 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,9 +315,10 @@
 		BEFB9FE1228517A100726CCD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				BE008F5C22872DDB00C63686 /* ObjectAssociation.swift */,
+				BE008F6022872E2B00C63686 /* Extension */,
+				BE008F5B2287097600C63686 /* ImageView */,
 				BEFB9FE922851D5700726CCD /* Protocols */,
-				BE008F532286D9F700C63686 /* ImageView.swift */,
-				BE008F552286DA2200C63686 /* ImageLoader.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -480,11 +505,14 @@
 				BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */,
 				BE2EFA642285F77B006A6B40 /* MovieListResponse.swift in Sources */,
 				BEFB9FE3228517B500726CCD /* Coordinator.swift in Sources */,
+				BE008F5F22872E2200C63686 /* UIViewController+Loading.swift in Sources */,
 				BE2EFA622285F349006A6B40 /* Movie.swift in Sources */,
 				BEFB9FEB22851D6C00726CCD /* NibLoadable.swift in Sources */,
 				BE2FAB582285B9710070D496 /* SessionConfiguration.swift in Sources */,
 				BE2EFA5F2285F30C006A6B40 /* ListDataController.swift in Sources */,
 				BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */,
+				BE008F6222872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift in Sources */,
+				BE008F5D22872DDB00C63686 /* ObjectAssociation.swift in Sources */,
 				BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
