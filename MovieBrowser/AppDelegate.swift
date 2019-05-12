@@ -37,4 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return ApplicationCoordinator(navigationController: rootController)
     }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        FavoriteStorage.shared.store()
+    }
 }

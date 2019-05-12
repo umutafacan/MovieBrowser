@@ -37,6 +37,7 @@
 		BE2FAB582285B9710070D496 /* SessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB572285B9710070D496 /* SessionConfiguration.swift */; };
 		BE2FAB5A2285B9940070D496 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB592285B9940070D496 /* URLRequest.swift */; };
 		BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB5B2285B9C20070D496 /* URLSessionManager.swift */; };
+		BE90358D22881870008ED6D7 /* FavoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90358C22881870008ED6D7 /* FavoriteStorage.swift */; };
 		BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0A82284876700413B3D /* AppDelegate.swift */; };
 		BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0AA2284876700413B3D /* ListViewController.swift */; };
 		BEABC0B02284876800413B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0AF2284876800413B3D /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		BE2FAB572285B9710070D496 /* SessionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionConfiguration.swift; sourceTree = "<group>"; };
 		BE2FAB592285B9940070D496 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		BE2FAB5B2285B9C20070D496 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
+		BE90358C22881870008ED6D7 /* FavoriteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStorage.swift; sourceTree = "<group>"; };
 		BEABC0A52284876700413B3D /* MovieBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0A82284876700413B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEABC0AA2284876700413B3D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -199,13 +201,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BE008F762288088300C63686 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		BE2EFA5D2285F2A4006A6B40 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +270,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BE6B603C2288168A005803B6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE90358C22881870008ED6D7 /* FavoriteStorage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BEABC09C2284876700413B3D = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				BE008F63228745BF00C63686 /* Detail */,
-				BE008F762288088300C63686 /* Search */,
 				BEABC0D822848C6C00413B3D /* List */,
 			);
 			path = Scenes;
@@ -360,6 +362,7 @@
 		BEFB9FE02285178900726CCD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE6B603C2288168A005803B6 /* Helpers */,
 				BE2FAB4D2285B7560070D496 /* Network */,
 				BEFB9FE1228517A100726CCD /* Base */,
 				BEFB9FE622851A1900726CCD /* Coordinators */,
@@ -544,6 +547,7 @@
 				BE008F542286D9F700C63686 /* ImageView.swift in Sources */,
 				BEFB9FF42285247300726CCD /* ListCollectionViewCell.swift in Sources */,
 				BE008F522286C22B00C63686 /* ImageRequest.swift in Sources */,
+				BE90358D22881870008ED6D7 /* FavoriteStorage.swift in Sources */,
 				BE2FAB5A2285B9940070D496 /* URLRequest.swift in Sources */,
 				BE008F7122874AFF00C63686 /* DetailDataController.swift in Sources */,
 				BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */,
