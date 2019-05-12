@@ -38,6 +38,7 @@
 		BE2FAB5A2285B9940070D496 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB592285B9940070D496 /* URLRequest.swift */; };
 		BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FAB5B2285B9C20070D496 /* URLSessionManager.swift */; };
 		BE90358D22881870008ED6D7 /* FavoriteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90358C22881870008ED6D7 /* FavoriteStorage.swift */; };
+		BE90358F2288289A008ED6D7 /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90358E2288289A008ED6D7 /* FavoriteProtocol.swift */; };
 		BEABC0A92284876700413B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0A82284876700413B3D /* AppDelegate.swift */; };
 		BEABC0AB2284876700413B3D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABC0AA2284876700413B3D /* ListViewController.swift */; };
 		BEABC0B02284876800413B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEABC0AF2284876800413B3D /* Assets.xcassets */; };
@@ -104,6 +105,7 @@
 		BE2FAB592285B9940070D496 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		BE2FAB5B2285B9C20070D496 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		BE90358C22881870008ED6D7 /* FavoriteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStorage.swift; sourceTree = "<group>"; };
+		BE90358E2288289A008ED6D7 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
 		BEABC0A52284876700413B3D /* MovieBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0A82284876700413B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEABC0AA2284876700413B3D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				BE90358C22881870008ED6D7 /* FavoriteStorage.swift */,
+				BE90358E2288289A008ED6D7 /* FavoriteProtocol.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */,
 				BE2FAB542285B92F0070D496 /* Response.swift in Sources */,
 				BE2EFA692285F9F0006A6B40 /* DecodableHelpers.swift in Sources */,
+				BE90358F2288289A008ED6D7 /* FavoriteProtocol.swift in Sources */,
 				BE008F65228745CC00C63686 /* DetailViewController.swift in Sources */,
 				BE2EFA642285F77B006A6B40 /* MovieListResponse.swift in Sources */,
 				BE008F6D228749E500C63686 /* MovieDetailRequest.swift in Sources */,

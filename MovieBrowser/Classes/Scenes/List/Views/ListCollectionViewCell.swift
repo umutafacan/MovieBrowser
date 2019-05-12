@@ -11,6 +11,7 @@ import UIKit
 
 final class ListCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var favoriteImageView: UIImageView!
     static let cellIdentifier = "ListCollectionViewCell"
 
     @IBOutlet private weak var imageView: ImageView!
@@ -25,6 +26,12 @@ final class ListCollectionViewCell: UICollectionViewCell {
     var imagePath: String? {
         didSet {
             imageView.imagePath = imagePath
+        }
+    }
+
+    var isFavorite: Bool = false {
+        didSet {
+            favoriteImageView.image = isFavorite ? UIImage(named: "favorite_star") : nil
         }
     }
 

@@ -28,6 +28,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-oi-etl">
+                        <rect key="frame" x="310" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="9CD-Ce-9hB"/>
+                            <constraint firstAttribute="width" constant="40" id="eGI-dp-Ffu"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
@@ -37,11 +44,14 @@
                 <constraint firstItem="fy0-s2-k2X" firstAttribute="leading" secondItem="H6x-Vb-uLH" secondAttribute="leading" id="LTX-Nd-5yQ"/>
                 <constraint firstAttribute="bottom" secondItem="fy0-s2-k2X" secondAttribute="bottom" id="Np0-k1-UWa"/>
                 <constraint firstAttribute="bottom" secondItem="PPU-Is-3hG" secondAttribute="bottom" id="XfZ-aQ-dUf"/>
+                <constraint firstItem="4Ti-oi-etl" firstAttribute="top" secondItem="H6x-Vb-uLH" secondAttribute="top" id="fN8-mG-RhG"/>
+                <constraint firstAttribute="trailing" secondItem="4Ti-oi-etl" secondAttribute="trailing" id="hQk-Ib-Lta"/>
                 <constraint firstItem="PPU-Is-3hG" firstAttribute="top" secondItem="H6x-Vb-uLH" secondAttribute="top" id="kDV-Du-eYs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="hmm-qE-qui"/>
             <size key="customSize" width="350" height="179"/>
             <connections>
+                <outlet property="favoriteImageView" destination="4Ti-oi-etl" id="gBk-ZQ-hLd"/>
                 <outlet property="imageView" destination="PPU-Is-3hG" id="e9A-RN-ggQ"/>
                 <outlet property="titleLabel" destination="fy0-s2-k2X" id="ZAK-LV-zSq"/>
             </connections>

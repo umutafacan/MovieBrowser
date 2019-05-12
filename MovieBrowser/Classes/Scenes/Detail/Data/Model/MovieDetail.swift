@@ -6,7 +6,7 @@
 //  Copyright © 2019 umutafacan. All rights reserved.
 //
 
-struct MovieDetail: Decodable {
+struct MovieDetail: Decodable, FavoriteProtocol {
 
     private enum CodingKeys: String, CodingKey {
         case title
@@ -32,14 +32,5 @@ struct MovieDetail: Decodable {
         voteCount = try container.decode(Int.self, forKey: .voteCount)
         voteAvarage = try container.decode(Float.self, forKey: .voteAvarage)
         identifier = try container.decode(Int.self, forKey: .identifier)
-    }
-
-    var isFavorite: Bool {
-        get {
-            return FavoriteStorage.shared.favorites[identifier] ?? false
-        }
-        set {
-            FavoriteStorage.shared.favorites[identifier] = newValue
-        }
     }
 }

@@ -41,6 +41,8 @@ final class ListViewController: UIViewController {
         }
     }
 
+    private var lastInteractedIndex: IndexPath?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,6 +58,15 @@ final class ListViewController: UIViewController {
         configureNavigationBar()
 
         viewModel.loadMovies()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let index = lastInteractedIndex else {
+            return
+        }
+        lastInteractedIndex = nil
+        collectionView.reloadItems(at: [index])
     }
 }
 
@@ -95,6 +106,7 @@ extension ListViewController: UICollectionViewDataSource {
         cell.title = movie.title
         cell.imagePath = movie.posterPath
         cell.style = layout
+        cell.isFavorite = movie.isFavorite
 
         return cell
     }
@@ -150,6 +162,7 @@ extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         let movieId = viewModel.filteredMovies[indexPath.item].identifier
+        lastInteractedIndex = indexPath
         onDetail?(movieId)
     }
 }

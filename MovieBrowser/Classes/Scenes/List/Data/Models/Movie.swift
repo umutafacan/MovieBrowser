@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Movie: Decodable {
+final class Movie: Decodable, FavoriteProtocol {
 
     private enum CodingKeys: String, CodingKey {
         case identifier = "id"
