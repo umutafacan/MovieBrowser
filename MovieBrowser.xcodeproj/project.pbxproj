@@ -106,6 +106,7 @@
 		BE2FAB5B2285B9C20070D496 /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
 		BE90358C22881870008ED6D7 /* FavoriteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStorage.swift; sourceTree = "<group>"; };
 		BE90358E2288289A008ED6D7 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
+		BE90359022889664008ED6D7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BEABC0A52284876700413B3D /* MovieBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABC0A82284876700413B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEABC0AA2284876700413B3D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +285,7 @@
 		BEABC09C2284876700413B3D = {
 			isa = PBXGroup;
 			children = (
+				BE90359022889664008ED6D7 /* README.md */,
 				BEABC0A72284876700413B3D /* MovieBrowser */,
 				BEABC0BC2284876800413B3D /* MovieBrowserTests */,
 				BEABC0C72284876800413B3D /* MovieBrowserUITests */,
