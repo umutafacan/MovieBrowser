@@ -37,6 +37,13 @@ class ImageView: UIImageView {
         }
     }
 
+    var imageWidth: CGFloat? {
+        didSet {
+            guard let imageWidth = imageWidth else { return }
+            imageLoader.imageWidth = Int(imageWidth)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()

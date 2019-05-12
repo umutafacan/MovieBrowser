@@ -10,10 +10,32 @@ import UIKit
 
 final class DetailViewController: UIViewController {
     
-    @IBOutlet weak var imageView: ImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var imageView: ImageView! {
+        didSet {
+            imageView.imageWidth = 500
+            imageView.contentMode = .scaleAspectFill
+        }
+    }
+
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.numberOfLines = 0
+            titleLabel.font = .boldSystemFont(ofSize: 17)
+        }
+    }
+
+    @IBOutlet weak var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.numberOfLines = 0
+            descriptionLabel.font = .systemFont(ofSize: 14)
+        }
+    }
+
+    @IBOutlet weak var bottomLabel: UILabel! {
+        didSet {
+            bottomLabel.numberOfLines = 0
+        }
+    }
 
     var viewModel: DetailViewModel!
 

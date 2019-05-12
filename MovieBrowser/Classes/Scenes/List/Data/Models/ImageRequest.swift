@@ -11,14 +11,14 @@ import Foundation
 struct ImageRequest: Request {
 
     private enum Constant {
-        static let sizePrefix = "w200"
+        static let sizePrefix = "w"
     }
 
     var endpoint: String
 
     var method: HTTPMethod = .get
 
-    init(path: String) {
-        self.endpoint = [Constant.sizePrefix, path].joined()
+    init(path: String, width: Int = 200) {
+        self.endpoint = [Constant.sizePrefix, "\(width)", path].joined()
     }
 }

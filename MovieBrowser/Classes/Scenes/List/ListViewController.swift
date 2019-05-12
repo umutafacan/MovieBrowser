@@ -24,6 +24,9 @@ final class ListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    /// Closure for detail show request
+    var onDetail: ((Int) -> Void)?
+
     var viewModel: ListViewModelInterface!
 
     private var layout: Layout = .grid {
@@ -133,6 +136,15 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
 
         let width = collectionView.frame.width
         return CGSize(width: width, height: Constant.buttonHeight)
+    }
+}
+
+extension ListViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        let movieId = viewModel.movies[indexPath.item].identifier
+        onDetail?(movieId)
     }
 }
 

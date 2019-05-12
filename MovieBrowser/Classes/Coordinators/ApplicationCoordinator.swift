@@ -30,6 +30,19 @@ private extension ApplicationCoordinator {
         let viewController = ListViewController.loadFromNib()
         viewController.viewModel = viewModel
 
+        viewController.onDetail = { [weak self] movieId in
+            self?.runDetailFlow(movieId: movieId)
+        }
+
         navigationController.setViewControllers([viewController], animated: true)
+    }
+
+    func runDetailFlow(movieId: Int) {
+        let viewModel = DetailViewModel(dataController: DetailDataController(),
+                                        movieId: movieId)
+        let viewController = DetailViewController.loadFromNib()
+        viewController.viewModel = viewModel
+
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

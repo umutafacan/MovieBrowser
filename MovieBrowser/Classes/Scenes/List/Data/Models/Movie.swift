@@ -11,9 +11,12 @@ import Foundation
 final class Movie: Decodable {
 
     private enum CodingKeys: String, CodingKey {
+        case identifier = "id"
         case title
         case posterPath = "poster_path"
     }
+
+    let identifier: Int
 
     let title: String?
 
