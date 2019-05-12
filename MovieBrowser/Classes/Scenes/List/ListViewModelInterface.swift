@@ -10,7 +10,9 @@ protocol ListViewModelInterface {
 
     var stateChangeHandler: ((ListState.Change) -> Void)?  { get set }
 
-    var movies: [Movie] { get }
+    var filteredMovies: [Movie] { get }
 
     func loadMovies()
+
+    func filter(by keyword: String?) 
 }

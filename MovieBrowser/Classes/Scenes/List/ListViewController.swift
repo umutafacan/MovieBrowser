@@ -24,6 +24,12 @@ final class ListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+    
     /// Closure for detail show request
     var onDetail: ((Int) -> Void)?
 
@@ -74,7 +80,7 @@ private extension ListViewController {
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return viewModel.movies.count
+        return viewModel.filteredMovies.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -85,7 +91,7 @@ extension ListViewController: UICollectionViewDataSource {
                 return UICollectionViewCell(frame: .zero)
         }
 
-        let movie = viewModel.movies[indexPath.item]
+        let movie = viewModel.filteredMovies[indexPath.item]
         cell.title = movie.title
         cell.imagePath = movie.posterPath
         cell.style = layout
@@ -143,8 +149,14 @@ extension ListViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        let movieId = viewModel.movies[indexPath.item].identifier
+        let movieId = viewModel.filteredMovies[indexPath.item].identifier
         onDetail?(movieId)
+    }
+}
+
+extension ListViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
 
@@ -195,6 +207,17 @@ private extension ListViewController {
         configureLayoutButton(layout: layout)
         // TODO: Localize
         navigationItem.title = "Movies List"
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.filter(by: nil)
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filter(by: searchText)
     }
 }
 

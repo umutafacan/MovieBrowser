@@ -20,7 +20,11 @@ final class ListViewModel: ListViewModelInterface {
         }
     }
 
-    var movies: [Movie] = []
+    private var movies: [Movie] = []
+
+    var filteredMovies: [Movie] = []
+
+    private var filterKeyword: String?
 
     private var latestFetchedPage = 0
     private var totalPages: Int?
@@ -60,10 +64,27 @@ final class ListViewModel: ListViewModelInterface {
             }
 
             strongSelf.movies.append(contentsOf: movies)
+
             strongSelf.latestFetchedPage += 1
             strongSelf.totalPages = response.totalPages
 
-            strongSelf.state.onChange?(.movies)
+            strongSelf.filter(by: strongSelf.filterKeyword)
         })
+    }
+
+    func filter(by keyword: String?) {
+        filterKeyword = keyword
+        guard let keyword = keyword,
+            !keyword.isEmpty else {
+            filteredMovies = movies
+            state.onChange?(.movies)
+            return
+        }
+
+        filteredMovies = movies.filter({ (movie) -> Bool in
+            return movie.title?.contains(keyword) ?? false
+        })
+
+        state.onChange?(.movies)
     }
 }

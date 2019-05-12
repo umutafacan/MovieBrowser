@@ -199,6 +199,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BE008F762288088300C63686 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		BE2EFA5D2285F2A4006A6B40 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				BE008F63228745BF00C63686 /* Detail */,
+				BE008F762288088300C63686 /* Search */,
 				BEABC0D822848C6C00413B3D /* List */,
 			);
 			path = Scenes;
