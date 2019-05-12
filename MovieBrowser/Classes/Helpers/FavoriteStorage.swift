@@ -11,7 +11,7 @@ import Foundation
 final class FavoriteStorage {
 
     private enum Constant {
-        static let path = "/backup/favorites"
+        static let path = "favorites.archive"
     }
 
     static let shared = FavoriteStorage()
@@ -25,13 +25,34 @@ final class FavoriteStorage {
 
 extension FavoriteStorage {
     func store() {
-        NSKeyedArchiver.archiveRootObject(favorites, toFile: Constant.path)
+        guard let data = try? NSKeyedArchiver.archivedData(withRootObject: favorites, requiringSecureCoding: true) else {
+            print("Error while achiving data!")
+            return
+        }
+
+        do {
+            try data.write(to: URL(fileURLWithPath: filePath(key: Constant.path)))
+        } catch {
+            print("Error while writing data!")
+        }
     }
 
     private func load() {
-        guard let favorites = NSKeyedUnarchiver.unarchiveObject(withFile: Constant.path) as? [Int: Bool] else {
-            return
+
+        if let nsData = NSData(contentsOfFile: filePath(key: Constant.path)) {
+            do {
+                let data = Data(referencing:nsData)
+                self.favorites = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Int: Bool] ?? [:]
+            }
+            catch {
+                print("Error while reading!")
+            }
         }
-        self.favorites = favorites
+    }
+
+    private func filePath(key:String) -> String {
+        let manager = FileManager.default
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first
+        return (url!.appendingPathComponent(key).path)
     }
 }

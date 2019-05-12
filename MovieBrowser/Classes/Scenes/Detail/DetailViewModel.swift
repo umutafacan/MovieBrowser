@@ -25,6 +25,8 @@ final class DetailViewModel {
     private let dataController: DetailDataProtocol
     private let movieId: Int
 
+    private var movieDetail: MovieDetail?
+
     init(dataController: DetailDataProtocol, movieId: Int) {
         self.dataController = dataController
         self.movieId = movieId
@@ -36,16 +38,25 @@ final class DetailViewModel {
             guard let strongSelf = self else {
                 return
             }
+
             strongSelf.state.isLoading = false
 
-            strongSelf.state.imageSource = response?.posterPath
-            strongSelf.state.movieInfo = MovieInfo(title: response?.title,
-                                                   description: response?.description)
-            guard let avarage = response?.voteAvarage,
-                let count = response?.voteCount else {
-                    return
+            strongSelf.movieDetail = response
+
+            strongSelf.state.imageSource = strongSelf.movieDetail?.posterPath
+            strongSelf.state.movieInfo = MovieInfo(title: strongSelf.movieDetail?.title,
+                                                   description: strongSelf.movieDetail?.description)
+            guard let movieDetail = strongSelf.movieDetail else {
+                return
             }
-            strongSelf.state.vote = VoteInfo(avarage: avarage, count: count)
+            strongSelf.state.vote = VoteInfo(avarage: movieDetail.voteAvarage, count: movieDetail.voteCount)
+
+            strongSelf.state.isFavorite = movieDetail.isFavorite
         }
+    }
+
+    func toggleFavoriteOption() {
+        movieDetail?.isFavorite = !state.isFavorite
+        state.isFavorite = movieDetail?.isFavorite ?? false
     }
 }

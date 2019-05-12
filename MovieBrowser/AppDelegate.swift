@@ -38,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return ApplicationCoordinator(navigationController: rootController)
     }
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        FavoriteStorage.shared.store()
+    }
+
     func applicationWillTerminate(_ application: UIApplication) {
         FavoriteStorage.shared.store()
     }

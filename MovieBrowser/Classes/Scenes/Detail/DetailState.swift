@@ -16,6 +16,7 @@ final class DetailState {
         case imageSource(String?)
         case movieInfo(MovieInfo?)
         case vote(VoteInfo?)
+        case favorite(Bool)
     }
 
     var onChange: ((Change) -> Void)?
@@ -41,6 +42,12 @@ final class DetailState {
     var vote: VoteInfo? {
         didSet {
             onChange?(.vote(vote))
+        }
+    }
+
+    var isFavorite: Bool = false {
+        didSet {
+            onChange?(.favorite(isFavorite))
         }
     }
 }

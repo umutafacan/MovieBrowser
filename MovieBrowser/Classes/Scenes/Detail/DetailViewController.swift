@@ -67,6 +67,8 @@ extension DetailViewController {
         case .vote(let vote):
             guard let vote = vote else  { return }
             bottomLabel.text = "Avarage: \(vote.avarage) by \(vote.count) votes"
+        case .favorite(let isFavorite):
+            configureFavoriteButton(isFavorite: isFavorite)
         }
     }
 }
@@ -76,6 +78,23 @@ extension DetailViewController {
     func configureNavigationBar() {
         // TODO: Localize
         navigationItem.title = "Movie Detail"
+    }
+
+    func configureFavoriteButton(isFavorite: Bool) {
+
+        let image = isFavorite ? UIImage(named: "filled_star") : UIImage(named: "empty_star")
+
+        let button = UIBarButtonItem(image: image,
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(favoriteButtonTapped))
+
+        navigationItem.setRightBarButton(button, animated: true)
+    }
+
+    @objc
+    func favoriteButtonTapped() {
+        viewModel.toggleFavoriteOption()
     }
 }
 

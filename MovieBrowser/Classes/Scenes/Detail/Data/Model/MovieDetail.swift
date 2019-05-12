@@ -33,4 +33,13 @@ struct MovieDetail: Decodable {
         voteAvarage = try container.decode(Float.self, forKey: .voteAvarage)
         identifier = try container.decode(Int.self, forKey: .identifier)
     }
+
+    var isFavorite: Bool {
+        get {
+            return FavoriteStorage.shared.favorites[identifier] ?? false
+        }
+        set {
+            FavoriteStorage.shared.favorites[identifier] = newValue
+        }
+    }
 }
