@@ -21,6 +21,8 @@
 		BE008F6D228749E500C63686 /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F6C228749E500C63686 /* MovieDetailRequest.swift */; };
 		BE008F6F22874A8F00C63686 /* DetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F6E22874A8F00C63686 /* DetailDataProtocol.swift */; };
 		BE008F7122874AFF00C63686 /* DetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F7022874AFF00C63686 /* DetailDataController.swift */; };
+		BE008F7322874BBE00C63686 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F7222874BBE00C63686 /* DetailViewModel.swift */; };
+		BE008F7522874BC600C63686 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE008F7422874BC600C63686 /* DetailState.swift */; };
 		BE2EFA552285F0B2006A6B40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */; };
 		BE2EFA572285F114006A6B40 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA562285F114006A6B40 /* APIConstants.swift */; };
 		BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */; };
@@ -84,6 +86,8 @@
 		BE008F6C228749E500C63686 /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
 		BE008F6E22874A8F00C63686 /* DetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataProtocol.swift; sourceTree = "<group>"; };
 		BE008F7022874AFF00C63686 /* DetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataController.swift; sourceTree = "<group>"; };
+		BE008F7222874BBE00C63686 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		BE008F7422874BC600C63686 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		BE2EFA542285F0B2006A6B40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BE2EFA562285F114006A6B40 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BE2EFA5B2285F2A1006A6B40 /* ListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListDataProtocol.swift; path = ../ListDataProtocol.swift; sourceTree = "<group>"; };
@@ -168,8 +172,10 @@
 			isa = PBXGroup;
 			children = (
 				BE008F682287481B00C63686 /* Data */,
+				BE008F7422874BC600C63686 /* DetailState.swift */,
 				BE008F64228745CC00C63686 /* DetailViewController.swift */,
 				BE008F66228745D800C63686 /* DetailViewController.xib */,
+				BE008F7222874BBE00C63686 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				BE008F562286DA2200C63686 /* ImageLoader.swift in Sources */,
 				BE2EFA662285F827006A6B40 /* MovieListRequest.swift in Sources */,
 				BEFB9FED22851EB400726CCD /* ListViewModel.swift in Sources */,
+				BE008F7522874BC600C63686 /* DetailState.swift in Sources */,
 				BE008F582286FC9B00C63686 /* ListFooterView.swift in Sources */,
 				BE2FAB5C2285B9C20070D496 /* URLSessionManager.swift in Sources */,
 				BE2FAB542285B92F0070D496 /* Response.swift in Sources */,
@@ -558,6 +565,7 @@
 				BE2FAB582285B9710070D496 /* SessionConfiguration.swift in Sources */,
 				BE2EFA5F2285F30C006A6B40 /* ListDataController.swift in Sources */,
 				BEFB9FE822851A2E00726CCD /* ApplicationCoordinator.swift in Sources */,
+				BE008F7322874BBE00C63686 /* DetailViewModel.swift in Sources */,
 				BE008F6222872ECC00C63686 /* UIActivityIndicatorView+Helpers.swift in Sources */,
 				BE008F5D22872DDB00C63686 /* ObjectAssociation.swift in Sources */,
 				BE2EFA5C2285F2A1006A6B40 /* ListDataProtocol.swift in Sources */,
